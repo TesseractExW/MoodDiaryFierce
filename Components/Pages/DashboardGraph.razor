@@ -6,19 +6,6 @@
 @inject NavigationManager Navigation
 <PageTitle>Dashboard Graph</PageTitle>
 
-<SfChart Title="Mood Trends Over Time">
-    <ChartPrimaryXAxis ValueType="Syncfusion.Blazor.Charts.ValueType.DateTime" LabelFormat="dd/MM" Title="Date"></ChartPrimaryXAxis>
-    <ChartPrimaryYAxis Title="Mood Level"></ChartPrimaryYAxis>
-
-    <ChartSeriesCollection>
-        <ChartSeries DataSource="@moods"
-                    XName="Time"
-                    YName="Happiness"
-                    Type="ChartSeriesType.StackingLine">
-                    <ChartMarker Visible="true"></ChartMarker>
-        </ChartSeries>
-    </ChartSeriesCollection>
-</SfChart>
 
 <AuthorizeView>
     <NotAuthorized>

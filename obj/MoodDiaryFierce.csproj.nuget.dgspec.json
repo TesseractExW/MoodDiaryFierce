@@ -80,10 +80,6 @@
               "target": "Package",
               "version": "[9.0.7, )"
             },
-            "Syncfusion.Blazor.Charts": {
-              "target": "Package",
-              "version": "[18.4.0.30, )"
-            },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
               "version": "[8.13.1, )"

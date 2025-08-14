@@ -4,7 +4,6 @@ using MoodDiaryFierce.Services;
 using MoodDiaryFierce;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authentication;
-using Syncfusion.Blazor;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -25,7 +24,6 @@ builder.Services.AddAuthentication(Constants.AuthScheme)
         options.Cookie.SecurePolicy = CookieSecurePolicy.Always;
     });
 builder.Services.AddAuthorization();
-builder.Services.AddSyncfusionBlazor();
 builder.Services.AddCascadingAuthenticationState();
 builder.Services.AddDbContext<DatabaseContext>(options =>
     options.UseSqlite("Data Source=database.db"));
