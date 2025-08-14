@@ -1,0 +1,125 @@
+﻿@using Microsoft.AspNetCore.Authorization
+@using MoodDiaryFierce.Models.Databases
+@attribute [Authorize]
+@page "/dashboard"
+@rendermode InteractiveServer
+@inject NavigationManager Navigation
+@inject UserManagerService UserManager
+<PageTitle>Dashboard</PageTitle>
+<div class="mx-8 mt-8">
+    <button class="rounded-full  px-5 py-1 bg-white cursor-pointer hover:bg-neutral-200 focus:bg-neutral-200 transition-colors text-black text-md shadow" @onclick="@AddNewMood">
+        + Add Mood
+    </button>
+    <a href="/dashboard/graph" class="rounded-full ml-2 px-5 py-1 bg-white cursor-pointer hover:bg-neutral-200 focus:bg-neutral-200 transition-colors text-black text-md shadow" @onclick="@AddNewMood">
+        View Graph
+    </a>
+</div>
+<div class="py-4 px-8 flex flex-col gap-4">
+    @foreach (var mood in moods!)
+    {
+        <div class="flex flex-col max-w-140 gap-2 bg-white p-4 w-fit shadow rounded-xl">
+            <div class="flex flex-row gap-5 items-center">
+                <p class="underline text-blue-500 font-medium w-8">#@mood.Id</p>
+                <p class=" text-neutral-400 font-normal w-40">@mood.Time</p>
+                <button @onclick="@(() => DeleteMood(mood))" class="text-red-300 font-semibold cursor-pointer uppercase tracking-wide">Delete</button>
+            </div>
+            <p class="text-neutral-500">@mood.Description</p>
+            <div class="flex flex-wrap gap-3">
+                @foreach (var (label, value) in new Dictionary<string, int>
+                {
+                    ["Happiness"] = mood.Happiness,
+                    ["Sadness"] = mood.Sadness,
+                    ["Fear"] = mood.Fear,
+                    ["Disgust"] = mood.Disgust,
+                    ["Anger"] = mood.Anger,
+                    ["Surprise"] = mood.Surprise
+                })
+                {
+                    <div @onclick="@(() => UpdateMood(mood, label))" class=@($"cursor-pointer flex items-center gap-1 px-2 py-0.5 rounded-md {ColorLevels[value]}")>
+                        <span class="font-medium">@label :</span>
+                        <span>@Levels[value]</span>
+                    </div>
+                }
+            </div>
+        </div>
+    }
+
+</div>
+
+
+<AuthorizeView>
+    <NotAuthorized>
+        @{
+            Navigation.NavigateTo("/login", forceLoad: true);
+        }
+    </NotAuthorized>
+</AuthorizeView>
+@code {
+    public List<MoodModel>? moods;
+    public List<string> Levels = new List<string>{
+        "Very Bad",
+        "Bad",
+        "Poor",
+        "Medium",
+        "Good",
+        "Excellent",
+    };
+    public List<string> ColorLevels = new List<string>
+    {
+        "bg-red-200",
+        "bg-orange-200",
+        "bg-yellow-100",
+        "bg-green-200",
+        "bg-sky-200",
+        "bg-indigo-200"
+    };
+    public async Task DeleteMood(MoodModel mood)
+    {
+        await UserManager.DeleteMoodAsync(mood);
+
+        moods = await UserManager.GetMoodsAsync();
+        StateHasChanged();
+    }
+    public async Task UpdateMood(MoodModel mood, string label)
+    {
+        switch (label)
+        {
+            case "Happiness": 
+                mood.Happiness = (mood.Happiness + 1) % 6; 
+                break;
+            case "Sadness": 
+                mood.Sadness = (mood.Sadness + 1) % 6; 
+                break;
+            case "Fear": 
+                mood.Fear = (mood.Fear + 1) % 6; 
+                break;
+            case "Disgust": 
+                mood.Disgust = (mood.Disgust + 1) % 6; 
+                break;
+            case "Anger": 
+                mood.Anger = (mood.Anger + 1) % 6; 
+                break;
+            case "Surprise": 
+                mood.Surprise = (mood.Surprise + 1) % 6; 
+                break;
+        }
+
+        await UserManager.EditMoodAsync(mood);
+
+        moods = await UserManager.GetMoodsAsync();
+        StateHasChanged();
+    }
+    protected override async Task OnInitializedAsync()
+    {
+        moods = await UserManager.GetMoodsAsync();
+    }
+    private async Task AddNewMood()
+    {
+        MoodModel mood = new MoodModel
+        {
+            Time = DateTime.Now,
+        };
+        await UserManager.AddMoodAsync(mood);
+        moods = await UserManager.GetMoodsAsync();
+    }
+}

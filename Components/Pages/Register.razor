@@ -1,0 +1,67 @@
+﻿@page "/register"
+@inject NavigationManager Navigation
+@inject FormAuthenticationService FormAuthService
+
+<PageTitle>Sign Up Page</PageTitle>
+<div class="w-full h-full md:bg-[#80AC33] bg:white flex flex-col items-center">
+    <div class="flex flex-col items-center gap-5 md:mt-50 bg-white md:shadow-2xl rounded-2xl py-12 lg:px-12 h-150">
+        <div class="flex flex-col w-full items-start justify-center">
+            <p class="text-sm text-neutral-500">Please enter your details</p>
+            <h3 class="text-2xl">Sign Up</h3>
+        </div>
+        <EditForm Model="@Model" OnValidSubmit="@SignUpUserSubmit" FormName="SignUpForm"
+            class="flex items-center flex-col">
+            <DataAnnotationsValidator />
+            <div class="flex flex-col justify-center items-left">
+                <label>Username: </label>
+                <InputText tabindex="0"
+                    class="px-4 w-80 h-10 mt-2 border-1 border-neutral-300 outline-0 focus:border-[#80ac33] focus:border-2 shadow-xs rounded-md transition-all"
+                    @bind-Value="Model.Username" />
+            </div>
+            <div class="mt-6 flex flex-col justify-center items-left">
+                <label>Password: </label>
+                <InputText type="password"
+                    class="px-4 w-80 h-10 mt-2 border-1 border-neutral-300 outline-0 focus:border-[#80ac33] focus:border-2 shadow-xs rounded-md transition-all"
+                    @bind-Value="Model.Password" />
+            </div>
+            <div class="mt-6 flex flex-col justify-center items-left">
+                <label>Confirmed Password: </label>
+                <InputText type="password"
+                    class="px-4 w-80 h-10 mt-2 border-1 border-neutral-300 outline-0 focus:border-[#80ac33] focus:border-2 shadow-xs rounded-md transition-all"
+                    @bind-Value="Model.ConfirmedPassword" />
+            </div>
+            <button tabindex="0"
+                class="mt-10 rounded-full px-6 py-2 hover:bg-[#80ac33] shadow-2xl cursor-pointer bg-[#80AC33] focus:bg-[#80AC33 transition-all text-white text-md"
+                type="submit">Sign In</button>
+            <div class="h-17 text-sm text-center mt-3 italic text-red-500">
+                <ValidationSummary />
+                @if (ErrorStatus is not null)
+                {
+                    <label>@ErrorStatus</label>
+                }
+                @if (SuccessStatus is not null)
+                {
+                    <label class="text-green-500">@SuccessStatus</label>
+                }
+            </div>
+            <p class="text-sm text-neutral-500">
+                Already have an account? <a class="text-blue-500 underline" href="/login">Sign In</a>
+            </p>
+        </EditForm>
+    </div>
+</div>
+
+@code {
+    [SupplyParameterFromForm]
+    public SignUpModel Model { get; set; } = new SignUpModel();
+    private string? ErrorStatus;
+    private string? SuccessStatus;
+    private async Task SignUpUserSubmit()
+    {
+        var response = await FormAuthService.SignUpAsync(Model);
+        if (response is not null)
+            ErrorStatus = response;
+        else
+            SuccessStatus = "Sign Up Successfully.";
+    }
+}

@@ -1,0 +1,70 @@
+﻿@rendermode InteractiveServer
+
+<div class="inline xl:hidden">
+    <i @onclick="@(() => Open = !Open)" tabindex="0"
+        class="@($"select-none cursor-pointer bx bx-list-ul text-3xl text-center mr-12 transition-transform {(Open ? "rotate-90" : "")}")"></i>
+    
+    @if (Open)
+    {
+        <div class="absolute left-0 top-[62px] bg-white w-screen">
+            <ul class="w-full h-full flex text-md flex-col font-medium items-center font-[Poppins] tracking-wider shadow-2xl">
+                <AuthorizeView>
+                    <Authorized>
+                        <li class="w-full h-full">
+                            <a tabindex="1" href="/dashboard"
+                                class="text-center py-5 hover:bg-neutral-200 focus:bg-neutral-200 block transition-colors text-neutral-700">
+                                Dashboard
+                            </a>
+                        </li>
+                    </Authorized>
+                </AuthorizeView>
+                <li class="w-full h-full">
+                    <a tabindex="2" href="/" class="text-center py-5 hover:bg-neutral-200 focus:bg-neutral-200 block transition-colors text-neutral-700">
+                        Home
+                    </a>
+                </li>
+                <li class="w-full h-full">
+                    <a tabindex="3" href="/details"
+                        class="text-center py-5 hover:bg-neutral-200 focus:bg-neutral-200 block transition-colors text-neutral-700">
+                        Details
+                    </a>
+                </li>
+                <li class="w-full h-full">
+                    <a tabindex="4" href="/support"
+                        class="text-center py-5 hover:bg-neutral-200 focus:bg-neutral-200 block transition-colors text-neutral-700">
+                        Support
+                    </a>
+                </li>
+                <li class="w-full h-full">
+                    <a tabindex="5" href="/contact"
+                        class="text-center py-5 hover:bg-neutral-200 focus:bg-neutral-200 block transition-colors text-neutral-700">
+                        Contact
+                    </a>
+                </li>
+                <li class="w-full h-full">
+                    <AuthorizeView>
+                        <Authorized>
+                            <form method="post" action="/signout">
+                                <button tabindex="6" type="submit"
+                                    class="w-full h-full text-center py-5 hover:bg-neutral-200 focus:bg-neutral-200 block transition-colors text-neutral-700">
+                                    Sign out
+                                </button>
+                            </form>
+                        </Authorized>
+                        <NotAuthorized>
+                            <a tabindex="6" href="/login"
+                                class="text-center py-5 hover:bg-neutral-200 focus:bg-neutral-200 block transition-colors text-neutral-700">
+                                Sign in
+                            </a>
+                        </NotAuthorized>
+                    </AuthorizeView>
+                </li>
+            </ul>
+        </div>
+    }
+</div>
+@code {
+    public bool Open = false;
+    [Parameter]
+    public EventCallback OnSignOutSubmit {get; set;}
+}

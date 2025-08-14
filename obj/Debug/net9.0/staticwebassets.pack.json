@@ -1,0 +1,49 @@
+{
+  "Files": [
+    {
+      "Id": "F:\\ImProjects\\BlazorWeb\\MoodDiaryFierce\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "F:\\ImProjects\\BlazorWeb\\MoodDiaryFierce\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "F:\\ImProjects\\BlazorWeb\\MoodDiaryFierce\\wwwroot\\next.jpg",
+      "PackagePath": "staticwebassets\\next.jpg"
+    },
+    {
+      "Id": "F:\\ImProjects\\BlazorWeb\\MoodDiaryFierce\\wwwroot\\start.css",
+      "PackagePath": "staticwebassets\\start.css"
+    },
+    {
+      "Id": "F:\\ImProjects\\BlazorWeb\\MoodDiaryFierce\\wwwroot\\tailwind.css",
+      "PackagePath": "staticwebassets\\tailwind.css"
+    },
+    {
+      "Id": "F:\\ImProjects\\BlazorWeb\\MoodDiaryFierce\\wwwroot\\true.jpg",
+      "PackagePath": "staticwebassets\\true.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.MoodDiaryFierce.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.MoodDiaryFierce.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.build.MoodDiaryFierce.props",
+      "PackagePath": "build\\MoodDiaryFierce.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildMultiTargeting.MoodDiaryFierce.props",
+      "PackagePath": "buildMultiTargeting\\MoodDiaryFierce.props"
+    },
+    {
+      "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.buildTransitive.MoodDiaryFierce.props",
+      "PackagePath": "buildTransitive\\MoodDiaryFierce.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
