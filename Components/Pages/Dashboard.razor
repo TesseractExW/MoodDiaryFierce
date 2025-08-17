@@ -1,23 +1,25 @@
-﻿@using Microsoft.AspNetCore.Authorization
-@using MoodDiaryFierce.Models.Databases
-@attribute [Authorize]
-@page "/dashboard"
+﻿@attribute [Authorize]
 @rendermode InteractiveServer
+
+@page "/dashboard"
+
 @inject NavigationManager Navigation
 @inject UserManagerService UserManager
+
 <PageTitle>Dashboard</PageTitle>
+
 <div class="mx-8 mt-8">
     <button class="rounded-full  px-5 py-1 bg-white cursor-pointer hover:bg-neutral-200 focus:bg-neutral-200 transition-colors text-black text-md shadow" @onclick="@AddNewMood">
         + Add Mood
     </button>
-    <a href="/dashboard/graph" class="rounded-full ml-2 px-5 py-1 bg-white cursor-pointer hover:bg-neutral-200 focus:bg-neutral-200 transition-colors text-black text-md shadow" @onclick="@AddNewMood">
+    <a href="/dashboard/graph" class="rounded-full ml-2 px-5 py-1 bg-white cursor-pointer hover:bg-neutral-200 focus:bg-neutral-200 transition-colors text-black text-md shadow">
         View Graph
     </a>
 </div>
-<div class="py-4 px-8 flex flex-col gap-4">
+<div class="py-4 px-8 content-start flex flex-wrap gap-4" >
     @foreach (var mood in moods!)
     {
-        <div class="flex flex-col max-w-140 gap-2 bg-white p-4 w-fit shadow rounded-xl">
+        <div class="flex flex-col max-w-140 gap-2 bg-white h-fit p-4 w-fit shadow rounded-xl">
             <div class="flex flex-row gap-5 items-center">
                 <p class="underline text-blue-500 font-medium w-8">#@mood.Id</p>
                 <p class=" text-neutral-400 font-normal w-40">@mood.Time</p>
@@ -46,7 +48,6 @@
 
 </div>
 
-
 <AuthorizeView>
     <NotAuthorized>
         @{
@@ -54,6 +55,7 @@
         }
     </NotAuthorized>
 </AuthorizeView>
+
 @code {
     public List<MoodModel>? moods;
     public List<string> Levels = new List<string>{

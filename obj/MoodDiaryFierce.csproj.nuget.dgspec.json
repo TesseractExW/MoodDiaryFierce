@@ -80,6 +80,10 @@
               "target": "Package",
               "version": "[9.0.7, )"
             },
+            "Radzen.Blazor": {
+              "target": "Package",
+              "version": "[7.2.1, )"
+            },
             "System.IdentityModel.Tokens.Jwt": {
               "target": "Package",
               "version": "[8.13.1, )"

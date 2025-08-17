@@ -1,15 +1,11 @@
 ﻿@page "/login"
-@* @rendermode InteractiveServer *@
-
-@using Microsoft.EntityFrameworkCore
-@using MoodDiaryFierce.Database
-@using MoodDiaryFierce.Models.Forms
-@using BCrypt.Net
+@layout BackgroundLayout
 @inject NavigationManager Navigation
 @inject FormAuthenticationService FormAuthService
 @inject DatabaseContext dataContext
 
 <PageTitle>Sign In Page</PageTitle>
+
 <div class="w-full h-full md:bg-[#80AC33] bg-white flex flex-col items-center">
     <div class="flex flex-col items-center gap-5 md:mt-50 bg-white md:shadow-2xl rounded-2xl py-12 lg:px-12  h-130">
         <div class="flex flex-col w-full items-start justify-center">

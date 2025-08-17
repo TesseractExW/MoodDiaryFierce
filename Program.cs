@@ -4,6 +4,7 @@ using MoodDiaryFierce.Services;
 using MoodDiaryFierce;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authentication;
+using Radzen;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -24,11 +25,12 @@ builder.Services.AddAuthentication(Constants.AuthScheme)
         options.Cookie.SecurePolicy = CookieSecurePolicy.Always;
     });
 builder.Services.AddAuthorization();
+builder.Services.AddHttpClient();
 builder.Services.AddCascadingAuthenticationState();
 builder.Services.AddDbContext<DatabaseContext>(options =>
     options.UseSqlite("Data Source=database.db"));
 builder.Services.AddHttpContextAccessor();
-
+builder.Services.AddRadzenComponents();
 builder.Services.AddScoped<FormAuthenticationService>(); 
 builder.Services.AddScoped<UserManagerService>(); 
 

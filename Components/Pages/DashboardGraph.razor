@@ -1,12 +1,50 @@
-﻿@page "/dashboard/graph"
-@attribute [Authorize]
-@using Microsoft.AspNetCore.Authorization
-@using MoodDiaryFierce.Models.Databases
+﻿@attribute [Authorize]
+@rendermode InteractiveServer
+@page "/dashboard/graph"
+
 @inject UserManagerService UserManager
 @inject NavigationManager Navigation
+
 <PageTitle>Dashboard Graph</PageTitle>
 
-
+<div class="mx-8 mt-8">
+    <a href="/dashboard" class="rounded-full  px-5 py-1 bg-white cursor-pointer hover:bg-neutral-200 focus:bg-neutral-200 transition-colors text-black text-md shadow">
+        Back To Dashboard
+    </a>
+</div>
+<RadzenStack class="lg:p-10 p-2 lg:w-[50%] w-full">
+    <RadzenCard Variant="Variant.Outlined">
+        <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" Wrap="FlexWrap.Wrap">
+            @foreach (var key in views.Keys)
+            {
+                <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" Gap="0.5rem">
+                <RadzenCheckBox @bind-Value="@views[key]" Name="@key"/>
+                <RadzenLabel Text="@key" Component="@key" class="text-neutral-600 lg:text-md text-sm" />
+            </RadzenStack>
+            }
+            <RadzenStack Orientation="Orientation.Horizontal" AlignItems="AlignItems.Center" Gap="0.5rem">
+                <RadzenCheckBox @bind-Value="@trend" Name="trend"/>
+                <RadzenLabel Text="Trend" Component="trend" class="text-neutral-600 lg:text-md text-sm" />
+            </RadzenStack>
+        </RadzenStack>
+    </RadzenCard>
+    <RadzenChart>
+        @foreach (var key in views.Keys)
+        {
+            <RadzenLineSeries Visible="@views[key]" Data="@moods" CategoryProperty="Time" Smooth="true" Title="@key" LineType="LineType.Solid"
+                ValueProperty="@key">
+                <RadzenMarkers Visible="true" MarkerType="MarkerType.Circle" />
+                <RadzenSeriesTrendLine Visible="@trend" Stroke="var(--rz-danger-dark)" LineType="LineType.Dashed" />
+            </RadzenLineSeries>
+        }
+        <RadzenCategoryAxis Padding="10" LabelAutoRotation="-30"/>
+        <RadzenValueAxis Min="0" Max="5" Step="1">
+            <RadzenGridLines Visible="true" />
+            <RadzenAxisTitle Text="Mood level" />
+        </RadzenValueAxis>
+        <RadzenLegend Position="LegendPosition.Bottom"/>
+    </RadzenChart>
+</RadzenStack>
 <AuthorizeView>
     <NotAuthorized>
         @{
@@ -16,6 +54,15 @@
 </AuthorizeView>
 @code {
     List<MoodModel>? moods;
+    bool trend = false;
+    Dictionary<string, bool> views = new Dictionary<string, bool>{
+        ["Happiness"]   = true,
+        ["Sadness"]     = true,
+        ["Fear"]        = true,
+        ["Disgust"]     = true,
+        ["Anger"]       = true,
+        ["Surprise"]    = true,
+    };
     protected override async Task OnInitializedAsync()
     {
         moods = await UserManager.GetMoodsAsync();

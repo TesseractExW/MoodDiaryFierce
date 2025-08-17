@@ -5,6 +5,26 @@
       "PackagePath": "staticwebassets\\app.css"
     },
     {
+      "Id": "F:\\ImProjects\\BlazorWeb\\MoodDiaryFierce\\wwwroot\\bg-1.jpg",
+      "PackagePath": "staticwebassets\\bg-1.jpg"
+    },
+    {
+      "Id": "F:\\ImProjects\\BlazorWeb\\MoodDiaryFierce\\wwwroot\\bg-2.jpg",
+      "PackagePath": "staticwebassets\\bg-2.jpg"
+    },
+    {
+      "Id": "F:\\ImProjects\\BlazorWeb\\MoodDiaryFierce\\wwwroot\\bg-3.jpg",
+      "PackagePath": "staticwebassets\\bg-3.jpg"
+    },
+    {
+      "Id": "F:\\ImProjects\\BlazorWeb\\MoodDiaryFierce\\wwwroot\\bg-4.jpg",
+      "PackagePath": "staticwebassets\\bg-4.jpg"
+    },
+    {
+      "Id": "F:\\ImProjects\\BlazorWeb\\MoodDiaryFierce\\wwwroot\\bg-5.jpg",
+      "PackagePath": "staticwebassets\\bg-5.jpg"
+    },
+    {
       "Id": "F:\\ImProjects\\BlazorWeb\\MoodDiaryFierce\\wwwroot\\favicon.png",
       "PackagePath": "staticwebassets\\favicon.png"
     },
