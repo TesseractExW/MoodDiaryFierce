@@ -1,13 +1,13 @@
 ﻿@rendermode InteractiveServer
 
-<div class="inline xl:hidden">
+<div class="inline xl:hidden z-11">
     <i @onclick="@(() => Open = !Open)" tabindex="0"
         class="@($"select-none cursor-pointer bx bx-list-ul text-3xl text-center mr-12 transition-transform {(Open ? "rotate-90" : "")}")"></i>
     
     @if (Open)
     {
-        <div class="absolute left-0 top-[62px] bg-white w-screen">
-            <ul class="w-full h-full flex text-md flex-col font-medium items-center font-[Poppins] tracking-wider shadow-2xl">
+        <div class="absolute left-0 sm:top-[64px] top-[60px] bg-white w-screen">
+            <ul class="w-full h-full flex text-md flex-col font-medium items-center font-[Poppins] tracking-wider">
                 <AuthorizeView>
                     <Authorized>
                         <li class="w-full h-full">

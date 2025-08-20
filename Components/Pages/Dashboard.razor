@@ -8,12 +8,14 @@
 
 <PageTitle>Dashboard</PageTitle>
 
-<div class="mx-8 mt-8">
-    <button class="rounded-full  px-5 py-1 bg-white cursor-pointer hover:bg-neutral-200 focus:bg-neutral-200 transition-colors text-black text-md shadow" @onclick="@AddNewMood">
-        + Add Mood
+<div class="mx-8 mt-8 flex">
+    <button class="flex justify-center gap-2 items-center w-fit rounded-full px-5 py-1 bg-white cursor-pointer hover:bg-neutral-200 focus:bg-neutral-200 transition-colors text-black text-md shadow" @onclick="@AddNewMood">
+        <i class="bx bx-cursor-add text-lg"></i> 
+        <span>Add Mood</span>
     </button>
-    <a href="/dashboard/graph" class="rounded-full ml-2 px-5 py-1 bg-white cursor-pointer hover:bg-neutral-200 focus:bg-neutral-200 transition-colors text-black text-md shadow">
-        View Graph
+    <a href="/dashboard/graph" class="flex justify-center gap-2 items-center w-fit rounded-full ml-2 px-5 py-1 bg-white cursor-pointer hover:bg-neutral-200 focus:bg-neutral-200 transition-colors text-black text-md shadow">
+        <i class="bx bx-chart-line text-lg"></i> 
+        <span>View Graph</span>
     </a>
 </div>
 <div class="py-4 px-8 content-start flex flex-wrap gap-4" >

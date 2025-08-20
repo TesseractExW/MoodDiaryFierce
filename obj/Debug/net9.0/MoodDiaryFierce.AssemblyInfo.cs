@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MoodDiaryFierce")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+076a9562abc5e07e69eca38d968839a724a125ef")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b83dc0866bf05587eede5ce79f1203ef7ee56b6b")]
 [assembly: System.Reflection.AssemblyProductAttribute("MoodDiaryFierce")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MoodDiaryFierce")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

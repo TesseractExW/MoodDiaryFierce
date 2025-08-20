@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "euOtb14/1DsWcVmQUwNcCz9ozvCD44aV92ZjNcAButw=",
+  "Hash": "dHJ2rqO5YinJZ3KSFslOMCwkPQGbgo6KEuscYqmQ1Hg=",
   "Source": "MoodDiaryFierce",
   "BasePath": "_content/MoodDiaryFierce",
   "Mode": "Default",
@@ -1361,12 +1361,12 @@
       "OriginalItemSpec": "C:\\Users\\User\\.nuget\\packages\\radzen.blazor\\7.2.1\\staticwebassets\\css\\material-dark-wcag.css"
     },
     {
-      "Identity": "F:\\ImProjects\\BlazorWeb\\MoodDiaryFierce\\obj\\Debug\\net9.0\\compressed\\sv8dq7l0w0-ofpnmq4mr4.gz",
+      "Identity": "F:\\ImProjects\\BlazorWeb\\MoodDiaryFierce\\obj\\Debug\\net9.0\\compressed\\sv8dq7l0w0-dkfztdd6zr.gz",
       "SourceId": "MoodDiaryFierce",
       "SourceType": "Discovered",
       "ContentRoot": "F:\\ImProjects\\BlazorWeb\\MoodDiaryFierce\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/MoodDiaryFierce",
-      "RelativePath": "tailwind#[.{fingerprint=ofpnmq4mr4}]?.css.gz",
+      "RelativePath": "tailwind#[.{fingerprint=dkfztdd6zr}]?.css.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -1375,8 +1375,8 @@
       "RelatedAsset": "F:\\ImProjects\\BlazorWeb\\MoodDiaryFierce\\wwwroot\\tailwind.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "qff5bu5zy4",
-      "Integrity": "ZhDditndoRkXcEn2ov7d5u1z7wntR8zkcbewezMiEgU=",
+      "Fingerprint": "jj6vrybp6d",
+      "Integrity": "IRpYqvPbKKbm8ThH8wS6G4CXsTxglcRk2W0BcSr4GIU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "F:\\ImProjects\\BlazorWeb\\MoodDiaryFierce\\wwwroot\\tailwind.css"
@@ -1753,8 +1753,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "ofpnmq4mr4",
-      "Integrity": "hB6aeStC2sFjr4b3ni/M+OF43KOTuo1UyuD+MucEw7U=",
+      "Fingerprint": "dkfztdd6zr",
+      "Integrity": "c+XMef4UutasKgtWwHUMYvvMLUkeGFe++0s2WQsZu+0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\tailwind.css"
@@ -9288,12 +9288,12 @@
     },
     {
       "Route": "tailwind.css",
-      "AssetFile": "F:\\ImProjects\\BlazorWeb\\MoodDiaryFierce\\obj\\Debug\\net9.0\\compressed\\sv8dq7l0w0-ofpnmq4mr4.gz",
+      "AssetFile": "F:\\ImProjects\\BlazorWeb\\MoodDiaryFierce\\obj\\Debug\\net9.0\\compressed\\sv8dq7l0w0-dkfztdd6zr.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000160875161"
+          "Quality": "0.000205170291"
         }
       ],
       "ResponseHeaders": [
@@ -9303,15 +9303,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6215"
+          "Value": "4873"
         },
         {
           "Name": "ETag",
-          "Value": "\"ZhDditndoRkXcEn2ov7d5u1z7wntR8zkcbewezMiEgU=\""
+          "Value": "\"IRpYqvPbKKbm8ThH8wS6G4CXsTxglcRk2W0BcSr4GIU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 17 Aug 2025 13:39:21 GMT"
+          "Value": "Wed, 20 Aug 2025 12:55:34 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9331,13 +9331,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"hB6aeStC2sFjr4b3ni/M+OF43KOTuo1UyuD+MucEw7U=\""
+          "Value": "W/\"c+XMef4UutasKgtWwHUMYvvMLUkeGFe++0s2WQsZu+0=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-hB6aeStC2sFjr4b3ni/M+OF43KOTuo1UyuD+MucEw7U="
+          "Value": "sha256-c+XMef4UutasKgtWwHUMYvvMLUkeGFe++0s2WQsZu+0="
         }
       ]
     },
@@ -9352,7 +9352,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "37051"
+          "Value": "24396"
         },
         {
           "Name": "Content-Type",
@@ -9360,11 +9360,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"hB6aeStC2sFjr4b3ni/M+OF43KOTuo1UyuD+MucEw7U=\""
+          "Value": "\"c+XMef4UutasKgtWwHUMYvvMLUkeGFe++0s2WQsZu+0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 17 Aug 2025 13:39:21 GMT"
+          "Value": "Wed, 20 Aug 2025 12:55:34 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9374,13 +9374,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-hB6aeStC2sFjr4b3ni/M+OF43KOTuo1UyuD+MucEw7U="
+          "Value": "sha256-c+XMef4UutasKgtWwHUMYvvMLUkeGFe++0s2WQsZu+0="
         }
       ]
     },
     {
       "Route": "tailwind.css.gz",
-      "AssetFile": "F:\\ImProjects\\BlazorWeb\\MoodDiaryFierce\\obj\\Debug\\net9.0\\compressed\\sv8dq7l0w0-ofpnmq4mr4.gz",
+      "AssetFile": "F:\\ImProjects\\BlazorWeb\\MoodDiaryFierce\\obj\\Debug\\net9.0\\compressed\\sv8dq7l0w0-dkfztdd6zr.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9389,7 +9389,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6215"
+          "Value": "4873"
         },
         {
           "Name": "Content-Type",
@@ -9397,11 +9397,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"ZhDditndoRkXcEn2ov7d5u1z7wntR8zkcbewezMiEgU=\""
+          "Value": "\"IRpYqvPbKKbm8ThH8wS6G4CXsTxglcRk2W0BcSr4GIU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 17 Aug 2025 13:39:21 GMT"
+          "Value": "Wed, 20 Aug 2025 12:55:34 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9419,18 +9419,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-ZhDditndoRkXcEn2ov7d5u1z7wntR8zkcbewezMiEgU="
+          "Value": "sha256-IRpYqvPbKKbm8ThH8wS6G4CXsTxglcRk2W0BcSr4GIU="
         }
       ]
     },
     {
-      "Route": "tailwind.ofpnmq4mr4.css",
-      "AssetFile": "F:\\ImProjects\\BlazorWeb\\MoodDiaryFierce\\obj\\Debug\\net9.0\\compressed\\sv8dq7l0w0-ofpnmq4mr4.gz",
+      "Route": "tailwind.dkfztdd6zr.css",
+      "AssetFile": "F:\\ImProjects\\BlazorWeb\\MoodDiaryFierce\\obj\\Debug\\net9.0\\compressed\\sv8dq7l0w0-dkfztdd6zr.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000160875161"
+          "Quality": "0.000205170291"
         }
       ],
       "ResponseHeaders": [
@@ -9440,15 +9440,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6215"
+          "Value": "4873"
         },
         {
           "Name": "ETag",
-          "Value": "\"ZhDditndoRkXcEn2ov7d5u1z7wntR8zkcbewezMiEgU=\""
+          "Value": "\"IRpYqvPbKKbm8ThH8wS6G4CXsTxglcRk2W0BcSr4GIU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 17 Aug 2025 13:39:21 GMT"
+          "Value": "Wed, 20 Aug 2025 12:55:34 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9468,13 +9468,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"hB6aeStC2sFjr4b3ni/M+OF43KOTuo1UyuD+MucEw7U=\""
+          "Value": "W/\"c+XMef4UutasKgtWwHUMYvvMLUkeGFe++0s2WQsZu+0=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "ofpnmq4mr4"
+          "Value": "dkfztdd6zr"
         },
         {
           "Name": "label",
@@ -9482,12 +9482,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-hB6aeStC2sFjr4b3ni/M+OF43KOTuo1UyuD+MucEw7U="
+          "Value": "sha256-c+XMef4UutasKgtWwHUMYvvMLUkeGFe++0s2WQsZu+0="
         }
       ]
     },
     {
-      "Route": "tailwind.ofpnmq4mr4.css",
+      "Route": "tailwind.dkfztdd6zr.css",
       "AssetFile": "F:\\ImProjects\\BlazorWeb\\MoodDiaryFierce\\wwwroot\\tailwind.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -9497,7 +9497,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "37051"
+          "Value": "24396"
         },
         {
           "Name": "Content-Type",
@@ -9505,11 +9505,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"hB6aeStC2sFjr4b3ni/M+OF43KOTuo1UyuD+MucEw7U=\""
+          "Value": "\"c+XMef4UutasKgtWwHUMYvvMLUkeGFe++0s2WQsZu+0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 17 Aug 2025 13:39:21 GMT"
+          "Value": "Wed, 20 Aug 2025 12:55:34 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9519,7 +9519,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "ofpnmq4mr4"
+          "Value": "dkfztdd6zr"
         },
         {
           "Name": "label",
@@ -9527,13 +9527,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-hB6aeStC2sFjr4b3ni/M+OF43KOTuo1UyuD+MucEw7U="
+          "Value": "sha256-c+XMef4UutasKgtWwHUMYvvMLUkeGFe++0s2WQsZu+0="
         }
       ]
     },
     {
-      "Route": "tailwind.ofpnmq4mr4.css.gz",
-      "AssetFile": "F:\\ImProjects\\BlazorWeb\\MoodDiaryFierce\\obj\\Debug\\net9.0\\compressed\\sv8dq7l0w0-ofpnmq4mr4.gz",
+      "Route": "tailwind.dkfztdd6zr.css.gz",
+      "AssetFile": "F:\\ImProjects\\BlazorWeb\\MoodDiaryFierce\\obj\\Debug\\net9.0\\compressed\\sv8dq7l0w0-dkfztdd6zr.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -9542,7 +9542,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "6215"
+          "Value": "4873"
         },
         {
           "Name": "Content-Type",
@@ -9550,11 +9550,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"ZhDditndoRkXcEn2ov7d5u1z7wntR8zkcbewezMiEgU=\""
+          "Value": "\"IRpYqvPbKKbm8ThH8wS6G4CXsTxglcRk2W0BcSr4GIU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 17 Aug 2025 13:39:21 GMT"
+          "Value": "Wed, 20 Aug 2025 12:55:34 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -9572,7 +9572,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "ofpnmq4mr4"
+          "Value": "dkfztdd6zr"
         },
         {
           "Name": "label",
@@ -9580,7 +9580,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-ZhDditndoRkXcEn2ov7d5u1z7wntR8zkcbewezMiEgU="
+          "Value": "sha256-IRpYqvPbKKbm8ThH8wS6G4CXsTxglcRk2W0BcSr4GIU="
         }
       ]
     },
